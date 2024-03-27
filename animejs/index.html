@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Js</title>
+  </head>
+  <style>
+    .my-box {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      margin: 10rem;
+    }
+  </style>
+  <body>
+    <div class="my-box"></div>
+    <div class="my-box"></div>
+    <div class="my-box"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+      integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      const myBox = document.querySelectorAll(".my-box");
+
+      const animate = {
+        targets: myBox,
+        translateX: 250,
+        scale: 3,
+        rotate: "5turn",
+        loop: true,
+        duration: 10000,
+        delay: 1000,
+      };
+
+      anime(animate);
+    </script>
+  </body>
+</html>
